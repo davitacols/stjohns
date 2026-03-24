@@ -4238,3 +4238,12 @@ body::after,
     align-items: stretch;
   }
 }
+
+/* Ensure League Spartan on header controls */
+.league-spartan-theme .site-nav a,
+.league-spartan-theme .site-nav .nav-cta,
+.league-spartan-theme .header-contact-link,
+.league-spartan-theme .header-visit-link,
+.league-spartan-theme .nav-toggle {
+  font-family: var(--font-league-spartan), sans-serif !important;
+}
