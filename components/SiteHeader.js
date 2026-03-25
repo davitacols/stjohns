@@ -72,10 +72,17 @@ export default function SiteHeader() {
             type="button"
             aria-expanded={isOpen}
             aria-controls="site-nav-panel"
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
             onClick={() => setIsOpen((current) => !current)}
           >
-            <span />
-            <span className="visually-hidden">Toggle navigation</span>
+            <span className="nav-toggle-copy" aria-hidden="true">
+              {isOpen ? "Close" : "Menu"}
+            </span>
+            <span className="nav-toggle-icon" aria-hidden="true">
+              <span className="nav-toggle-bar" />
+              <span className="nav-toggle-bar" />
+              <span className="nav-toggle-bar" />
+            </span>
           </button>
         </div>
 
@@ -94,3 +101,4 @@ export default function SiteHeader() {
     </header>
   );
 }
+
