@@ -5272,3 +5272,171 @@ body::after,
 
 
 
+
+.league-spartan-theme .utility-card--with-image {
+  padding: 0;
+  overflow: hidden;
+}
+
+.league-spartan-theme .utility-card-media {
+  position: relative;
+  min-height: 12.5rem;
+  overflow: hidden;
+}
+
+.league-spartan-theme .utility-card-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(14, 19, 28, 0.08), rgba(14, 19, 28, 0.36)),
+    radial-gradient(circle at top right, rgba(214, 167, 116, 0.18), transparent 34%);
+}
+
+.league-spartan-theme .utility-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  filter: saturate(1.04) contrast(1.02);
+}
+
+.league-spartan-theme .utility-card--with-image:hover .utility-card-media img,
+.league-spartan-theme .utility-card--with-image:focus-within .utility-card-media img {
+  transform: scale(1.05);
+  filter: saturate(1.08) contrast(1.03);
+}
+
+.league-spartan-theme .utility-card--with-image .utility-card-content {
+  display: grid;
+  align-content: start;
+  gap: 0.75rem;
+  padding: 1.35rem;
+}
+
+.league-spartan-theme .utility-card--with-image .utility-card-link {
+  margin-top: 0.2rem;
+}
+
+.league-spartan-theme .photo-showcase-section {
+  padding-top: clamp(1rem, 3vw, 2rem);
+}
+
+.league-spartan-theme .photo-showcase-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr 0.95fr;
+  grid-auto-rows: 15rem;
+  gap: 1rem;
+}
+
+.league-spartan-theme .photo-showcase-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 15rem;
+  border-radius: calc(var(--radius-lg) + 2px);
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  box-shadow: var(--shadow-lg);
+  background: #1e2738;
+}
+
+.league-spartan-theme .photo-showcase-card--tall {
+  grid-row: span 2;
+}
+
+.league-spartan-theme .photo-showcase-card--wide {
+  grid-column: span 2;
+}
+
+.league-spartan-theme .photo-showcase-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(19, 27, 39, 0.02) 0%, rgba(19, 27, 39, 0.16) 38%, rgba(19, 27, 39, 0.82) 100%),
+    radial-gradient(circle at top left, rgba(214, 167, 116, 0.22), transparent 28%);
+}
+
+.league-spartan-theme .photo-showcase-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease, filter 0.6s ease;
+  filter: saturate(1.02) contrast(1.03);
+}
+
+.league-spartan-theme .photo-showcase-card:hover img,
+.league-spartan-theme .photo-showcase-card:focus-within img {
+  transform: scale(1.04);
+  filter: saturate(1.08) contrast(1.04);
+}
+
+.league-spartan-theme .photo-showcase-copy {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 1;
+  display: grid;
+  gap: 0.4rem;
+  padding: 1.2rem 1.2rem 1.35rem;
+  color: #fff;
+}
+
+.league-spartan-theme .photo-showcase-kicker {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 248, 240, 0.72);
+}
+
+.league-spartan-theme .photo-showcase-copy h3 {
+  margin: 0;
+  font-family: "Newsreader", serif;
+  font-size: clamp(1.5rem, 2vw, 2.1rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.league-spartan-theme .photo-showcase-copy p {
+  margin: 0;
+  max-width: 32rem;
+  color: rgba(255, 248, 240, 0.82);
+  line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .league-spartan-theme .photo-showcase-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 14rem;
+  }
+
+  .league-spartan-theme .photo-showcase-card--tall,
+  .league-spartan-theme .photo-showcase-card--wide {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .league-spartan-theme .photo-showcase-card--tall {
+    min-height: 22rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .league-spartan-theme .photo-showcase-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .league-spartan-theme .photo-showcase-card,
+  .league-spartan-theme .photo-showcase-card--tall {
+    min-height: 18rem;
+  }
+
+  .league-spartan-theme .photo-showcase-copy {
+    padding: 1rem 1rem 1.15rem;
+  }
+}
+
+.league-spartan-theme .utility-card--with-image::after {
+  display: none;
+}

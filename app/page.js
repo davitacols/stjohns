@@ -1,4 +1,5 @@
 import FeatureStrip from "../components/FeatureStrip";
+import PhotoShowcase from "../components/PhotoShowcase";
 import { homeFeatureStrip, splitLeadSection } from "../lib/page-frames";
 import { getSourcePage } from "../lib/source-pages";
 
@@ -19,6 +20,7 @@ export default async function HomePage() {
     <>
       <div className="source-page source-page--home source-page--lead" dangerouslySetInnerHTML={{ __html: lead }} />
       <FeatureStrip {...homeFeatureStrip} className="feature-strip--home" />
+      <PhotoShowcase />
       <div
         className="source-page source-page--home source-page--body"
         dangerouslySetInnerHTML={{ __html: remainder }}

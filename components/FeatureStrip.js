@@ -63,8 +63,15 @@ export default function FeatureStrip({ eyebrow, title, copy, actions = [], cards
           {cards.map((card) => (
             <article
               key={`${card.title}-${card.eyebrow}`}
-              className={`utility-card${card.tone ? ` utility-card--${card.tone}` : ""}`}
+              className={`utility-card${card.tone ? ` utility-card--${card.tone}` : ""}${
+                card.image ? " utility-card--with-image" : ""
+              }`}
             >
+              {card.image ? (
+                <div className="utility-card-media" aria-hidden="true">
+                  <img src={card.image} alt="" loading="lazy" />
+                </div>
+              ) : null}
               <div className="utility-card-content">
                 <span className="utility-card-eyebrow">{card.eyebrow}</span>
                 <h3>{card.title}</h3>
